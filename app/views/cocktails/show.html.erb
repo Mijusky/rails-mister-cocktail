@@ -1,0 +1,23 @@
+<div class="container-fluid mt-5">
+  <div class="row justify-content-around">
+    <div class="col-3 p-4 show-cocktail">
+      <div class="text-center show-cocktail-name">
+        <h2><%= @cocktail.name %></h2>
+      </div>
+      <div class="text-center ingredient-container">
+        <img class="card-img-top" src="https://images.unsplash.com/photo-1545438102-799c3991ffb2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80" alt="Card image cap">
+        <% if @cocktail.doses == [] %>
+          <p> No ingredients added </p>
+        <% else %>
+          <% @cocktail.doses.each do |dose|%>
+          <p> <%= dose.ingredient.name %> - <%= dose.description %> <%= link_to ('<i class="far fa-minus-square"></i>').html_safe, dose_path(dose), method: :delete %></p>
+          <% end %>
+        <% end %>
+      </div>
+      <div class="align-bottom text-center">
+        <%= link_to ('<i class="far fa-plus-square"></i> Add dose😈').html_safe, new_cocktail_dose_path(@cocktail), class: "btn btn-primary" %>
+      </div>
+    </div>
+  </div>
+  <i class="fas fa-home"></i><%= link_to "Go back", cocktails_path %>
+</div>

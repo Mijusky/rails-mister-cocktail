@@ -1,0 +1,13 @@
+<div class="container"><h1></h1></div>
+
+<div class="container">
+  <h2 class="text-center mt-3">Get freaky!</h2>
+  <div class="row justify-content-center">
+    <div class="col-6 text-new">
+      <%= simple_form_for [@cocktail] do |f| %>
+        <%= f.input :name, label: "Name your cocktail"%>
+        <%= f.submit "Add", class: "btn-primary"%>
+      <% end %>
+    </div>
+  </div>
+</div>
