@@ -8,6 +8,10 @@ class CocktailsController < ApplicationController
     @star = Star.new
   end
 
+  def edit
+    @doses = @cocktail.doses
+  end
+
   def new
     @cocktail = Cocktail.new
   end
@@ -28,6 +32,6 @@ class CocktailsController < ApplicationController
   end
 
   def cocktail_params
-    params.require(:cocktail).permit(:name, :star, :description)
+    params.require(:cocktail).permit(:name, :star, :description, photo: [])
   end
 end
