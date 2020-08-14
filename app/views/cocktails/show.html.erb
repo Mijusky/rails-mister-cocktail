@@ -17,7 +17,7 @@
                  <input type="radio" id="star1" name="star[number]" value="1" /><label class = "full" for="star1" title="1 star"></label>
                </fieldset>
                <p><%= @cocktail.stars.length %> votes</p>
-               <%= f.submit "Rate", class: "btn btn-primary btn-xs align-bottom center"%>
+               <%= f.submit "Rate", class: "btn btn-pink btn-xs align-bottom center"%>
             </div>
           <% end %>
           <br>
@@ -48,11 +48,7 @@
         </table>
         <% end %>
       </div>
-      <div class="align-bottom text-center">
-        <%= link_to ('<i class="far fa-plus-square"></i> Add dose😈').html_safe, new_cocktail_dose_path(@cocktail), class: "btn btn-primary" %>
-      </div>
     </div>
   </div>
   <i class="fas fa-home"></i><%= link_to "Go back", cocktails_path %>
 </div>
-
