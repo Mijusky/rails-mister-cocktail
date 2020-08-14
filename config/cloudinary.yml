@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: dbafwby94
+  api_key: '551622471129375'
+  api_secret: SIg90TMDi7nyyfQg7Iks34_BzoQ
+  enhance_image_tag: true
+  static_file_support: false
+production:
+  cloud_name: dbafwby94
+  api_key: '551622471129375'
+  api_secret: SIg90TMDi7nyyfQg7Iks34_BzoQ
+  enhance_image_tag: true
+  static_file_support: true
+test:
+  cloud_name: dbafwby94
+  api_key: '551622471129375'
+  api_secret: SIg90TMDi7nyyfQg7Iks34_BzoQ
+  enhance_image_tag: true
+  static_file_support: false
