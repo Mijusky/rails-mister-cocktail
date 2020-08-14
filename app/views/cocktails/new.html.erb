@@ -6,8 +6,9 @@
         <%= f.input :name, label: "Name your cocktail"%>
         <%= f.input :photo, as: :file %>
         <%= f.submit "Add", class: "btn btn-pink"%>
-        <%= link_to "Back", cocktails_path, class: "btn btn-danger" %>
       <% end %>
     </div>
   </div>
 </div>
+<br>
+ <i class="fas fa-home"></i><%= link_to "Go back", cocktails_path %>
