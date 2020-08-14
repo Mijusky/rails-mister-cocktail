@@ -3,13 +3,13 @@
   <div class="row">
     <div class="col-xs-12 col-md-6 col-md-offset-3">
       <%= simple_form_for [@cocktail, @dose] do |f| %>
-      <%= f.input :ingredient, collection: Ingredient.order(:name), prompt: "Pick one" %>
-      <%= f.input :description %>
-      <%= f.submit "Submit", class: "btn btn-primary" %>
+      <%= f.input :description, :label => "Quantity" %>
+      <%= f.input :ingredient_id, :as => :select, :collection => Ingredient.all %>
+      <%= f.submit "Submit", class: "btn btn-pink" %>
       <% end %>
-      <div class="pad20">
-        <i class="fas fa-home"></i><%= link_to "Go back", cocktails_path %>
       </div>
     </div>
   </div>
 </div>
+
+<i class="fas fa-home"></i><%= link_to "Go back", cocktails_path %>
