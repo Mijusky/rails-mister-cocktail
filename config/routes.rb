@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'stars/create'
   get 'doses/new'
   get 'doses/create'
   get 'doses/destroy'
@@ -8,6 +9,7 @@ Rails.application.routes.draw do
   get 'cocktails/create'
   resources :cocktails, only: %i[index show new create] do
     resources :doses, only: %i[new create]
+    resources :stars, only: [:create]
   end
   delete '/doses/:id', to: 'doses#destroy', as: 'dose'
   root 'cocktails#index'
