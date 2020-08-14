@@ -1,9 +1,15 @@
+.cards {
+  margin-left: 60px;
+}
+
 .card {
-  height: 175px;
   background-size: cover !important;
   color: pink;
   position: relative;
   margin: 20px;
+  height: 94px;
+  width: 314px;
+}
   ul {
     display: none;
   }
@@ -14,8 +20,10 @@
     display: none;
     font-size: 10px;
   }
-}
 
+img {
+  height: 220px;
+}
 .card:hover {
   ul {
     display: block;
@@ -85,13 +93,8 @@
 
 .photo {
   margin: 10px auto;
-
 }
 
-
-img {
-  height: 250px;
-}
 
 @import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
 
