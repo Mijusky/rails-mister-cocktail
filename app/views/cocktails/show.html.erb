@@ -5,7 +5,6 @@
         <h2><%= @cocktail.name %></h2>
       </div>
       <div class="container text-center">
-      <div class="small-container">
         <div class="rating-container">
           <%= simple_form_for [@cocktail, @star], class: "form-inline" do |f| %>
             <div class="row", style="display: inline-block;">
@@ -50,3 +49,4 @@
           <br>
   <i class="fas fa-home"></i><%= link_to "Go back", cocktails_path %>
 </div>
+
